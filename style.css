@@ -6,24 +6,22 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f9;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
   color: #333;
   line-height: 1.6;
+  margin: 0;
 }
 
 nav {
-  background-color: #333;
+  background-color: #8e31ff;
   color: white;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 nav .logo {
@@ -32,29 +30,31 @@ nav .logo {
   text-transform: uppercase;
 }
 
-nav .Hustla-Logo img {
-  height: 50px;
-  margin-right: 15px;
-}
-
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
 .section-content {
-  max-width: 900px;
+  max-width: 1200px; /* Increased max-width */
   margin: 0 auto;
+  padding: 0 20px; /* Adjusted padding */
 }
 
-.section:nth-of-type(odd) {
-  background-color: #6a1b9a;
-  color: white;
+#home {
+  background-color: #8e31ff;
 }
 
-.section:nth-of-type(even) {
-  background-color: white;
-  color: #333;
+#about {
+  background-color: #ffffff;
+}
+
+#video {
+  background-color: #8e31ff;
+}
+
+#contact {
+  background-color: #ffffff;
 }
 
 .section_pic_container {
@@ -64,7 +64,7 @@ section {
 .home-pic,
 .about-pic {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; /* Increased max-width */
   height: auto;
   border-radius: 8px;
 }
@@ -96,18 +96,21 @@ section {
 }
 
 .section_button {
-  background-color: #ff7f50;
-  color: white;
-  border: none;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  border: 2px solid #000000; /* Black border to make it stand out */
   padding: 12px 25px;
   cursor: pointer;
   font-size: 18px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .section_button:hover {
-  background-color: #ff5722;
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #000000; /* Keep text black on hover */
+  border-color: #000000; /* Keep border black on hover */
 }
 
 .video-container {
@@ -120,7 +123,7 @@ section {
 }
 
 .contact-text {
-  max-width: 600px;
+  max-width: 800px; /* Increased max-width */
   margin: 0 auto;
 }
 
@@ -131,7 +134,7 @@ section {
 }
 
 footer {
-  background-color: #333;
+  background-color: #8e31ff;
   color: white;
   padding: 20px 0;
   text-align: center;
