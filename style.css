@@ -32,35 +32,43 @@ nav,
 }
 
 nav {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem 3rem;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 10vh; /* Whatever height of screen, nav takes 17% */
+  padding: 1rem 0; /* Adjust padding to balance the content */
 }
 
 .nav-links {
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
+  font-size: 1.5rem;
 }
 
 a {
-  color: #333;
+  color: black;
   text-decoration: none;
-  font-weight: 600;
+  text-decoration-color: white;
 }
 
 a:hover {
-  color: #555;
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
 }
 
 .logo {
-  font-size: 1.75rem;
-  font-weight: bold;
+  font-size: 2rem;
 }
 
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
 #hamburger-nav {
-  display: none;
+  display: none; /* when we are in desktop view, hamburger doesnt show up */
 }
 
 .hamburger-menu {
@@ -113,6 +121,30 @@ a:hover {
   max-height: 300px;
 }
 
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
 /* SECTIONS */
 
 section {
@@ -132,8 +164,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .section__text {
@@ -148,6 +181,7 @@ section {
 }
 
 .section__text__p1 {
+  margin-top: 2rem;
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 1rem;
@@ -155,10 +189,16 @@ section {
 
 .section__text__p2 {
   font-size: 1rem;
-  margin-bottom: 2rem;
 }
 
-.home-pic,
+.home-pic {
+  width: 100%;
+  max-width: 700px; /* Limit the maximum width */
+  height: auto;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
 .about-pic {
   width: 100%;
   border-radius: 2rem;
@@ -199,13 +239,14 @@ section {
 }
 
 .btn-color-1 {
-  background-color: #f57c00;
+  background-color: #a700f5;
   color: white;
+  margin-bottom: 1rem;
 }
 
 .btn-color-1:hover {
-  background-color: #f57c00;
-  color: black;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 .video-container {
@@ -222,65 +263,4 @@ section {
 
 .contact-email {
   margin-bottom: 1.5rem;
-}
-
-/* MEDIA QUERIES */
-
-@media (max-width: 1200px) {
-  section {
-    padding: 4vh 2rem;
-  }
-}
-
-@media (max-width: 992px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #hamburger-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .section-container {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 576px) {
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .title {
-    font-size: 1.75rem;
-  }
-
-  .section__pic-container {
-    width: 300px;
-    height: 300px;
-  }
-
-  .section__text__p1,
-  .section__text__p2 {
-    font-size: 0.9rem;
-  }
-
-  .home-pic,
-  .about-pic {
-    border-radius: 1rem;
-  }
-
-  .btn {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-  }
 }
