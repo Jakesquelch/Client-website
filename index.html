@@ -7,102 +7,103 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
+    <nav id="desktop-nav">
       <div class="logo">HUSTLA APP</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">HUSTLA APP</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
     </nav>
     <section id="home" class="section">
       <div class="section-content">
-        <div class="section_pic_container">
+        <div class="section__pic-container">
           <img src="./assets/image-1.webp" alt="Picture 1" class="home-pic" />
         </div>
-        <div class="home_text">
-          <p class="section_text_p1">
+        <div class="section__text">
+          <p class="section__text__p1">
             Join the UK's Largest Student Freelancing Community
           </p>
-          <p class="section_text_2">
-            Say goodbye to bar work and hello to Hustla, the App that makes you
-            your own CEO
+          <h1 class="title">Be Your Own CEO with Hustla</h1>
+          <p class="section__text__p2">
+            Say goodbye to bar work and hello to Hustla, the App that makes you your own CEO
           </p>
           <div class="btn-container">
-            <button class="section_button">Download now</button>
+            <button class="btn btn-color-1">Download now</button>
+          </div>
+          <div id="socials-container">
+            <img src="./assets/instagram.png" alt="Instagram Icon" class="icon" />
+            <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="icon" />
+            <img src="./assets/tiktok.png" alt="Tiktok Icon" class="icon" />
           </div>
         </div>
       </div>
     </section>
     <section id="about" class="section">
-      <div class="section-content">
-        <div class="about-text">
-          <p class="about-title">Hustla App</p>
-          <p class="about-subheading">
-            Hustla App - Connecting Students with Services
-          </p>
-          <p class="about-para">
-            Hustla App is a platform that connects students providing services
-            with students in need of services. Whether you're a Hustla offering
-            tutoring, hair styling, or music production, Hustla App makes it
-            easy to find the right match. Join our community and start earning
-            or finding the services you need today.
-          </p>
-        </div>
-        <div class="section_pic_container">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Hustla</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
           <img src="./assets/image-2.webp" alt="Picture 2" class="about-pic" />
         </div>
+        <div class="section__text">
+          <p>
+            Hustla App is a platform that connects students providing services with students in need of services. Whether you're a Hustla offering tutoring, hair styling, or music production, Hustla App makes it easy to find the right match. Join our community and start earning or finding the services you need today.
+          </p>
+        </div>
       </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" />
     </section>
     <section id="video" class="section">
-      <div class="section-content">
-        <div class="video-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/F_7ZoAQ3aJM"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="video-text">
-          <p class="video-title">Don't believe us?</p>
-          <p class="video-subheading">Hear from people like you</p>
-        </div>
+      <p class="section__text__p1">Hear from Others</p>
+      <h1 class="title">Don't Believe Us?</h1>
+      <div class="section-content video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/F_7ZoAQ3aJM"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
     <section id="contact" class="section">
-      <div class="section-content">
-        <div class="contact-text">
-          <p class="contact-title">Contact Us</p>
-          <p class="contact-subtext">
-            Have a question or a story to share? Send us a message and we'll get
-            back to you soon.
-          </p>
-          <p class="contact-email">Contact@hustlaapp.co.uk</p>
-          <div class="btn-container">
-            <button class="section_button">Contact Us</button>
-          </div>
+      <p class="section__text__p1">Get In Touch</p>
+      <h1 class="title">Contact Us</h1>
+      <div class="contact-info-upper-container">
+        <p class="contact-email">Contact@hustlaapp.co.uk</p>
+        <div class="btn-container">
+          <button class="btn btn-color-1">Contact Us</button>
         </div>
       </div>
     </section>
     <footer>
-      <div id="socials-container">
-        <img
-          src="./assets/instagram.png"
-          alt="Insta Icon"
-          class="icon"
-          onClick="location.href='https://www.instagram.com/hustlaapp/'"
-        />
-        <img
-          src="./assets/linkedin.png"
-          alt="Linkedin Icon"
-          class="icon"
-          onClick="location.href='https://www.linkedin.com/company/hustlaapp/about/'"
-        />
-        <img
-          src="./assets/tiktok.png"
-          alt="Tiktok Icon"
-          class="icon"
-          onClick="location.href='https://www.linkedin.com/company/hustlaapp/about/'"
-        />
-      </div>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#home">Back to top</a></li>
+          </ul>
+        </div>
+      </nav>
       <p>Copyright &#169; 2024 Hustla App - All Rights Reserved.</p>
     </footer>
   </body>
