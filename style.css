@@ -179,12 +179,14 @@ section {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #333;
+  border-bottom: 3px solid #8000ff;
+  padding-bottom: 0.5rem;
 }
 
 .section__text__p1 {
   margin-top: 2rem;
   font-size: 1.2rem;
-  color: #555;
+  color: #8000ff;
   margin-bottom: 1rem;
 }
 
@@ -206,6 +208,11 @@ section {
   height: auto;
   border-radius: 2rem;
   object-fit: cover;
+}
+
+.home-pic,
+.about-pic {
+  box-shadow: 0 4px 20px rgba(128, 0, 255, 0.2);
 }
 
 #socials-container {
@@ -240,17 +247,18 @@ section {
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+  background: linear-gradient(45deg, #8000ff, #6200cc);
 }
 
 .btn-color-1 {
-  background-color: #8000ff;
+  background: linear-gradient(45deg, #8000ff, #6200cc);
   color: white;
   margin-bottom: 1rem;
 }
 
-.btn-color-1:hover {
-  background-color: #000000;
-  color: rgb(255, 255, 255);
+.btn:hover {
+  background: linear-gradient(45deg, #6200cc, #8000ff);
+  transform: translateY(-2px);
 }
 
 .video-container {
@@ -267,4 +275,5 @@ section {
 
 .contact-email {
   margin-bottom: 1.5rem;
+  color: #8000ff;
 }
