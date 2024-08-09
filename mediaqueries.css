@@ -11,31 +11,34 @@
   }
 }
 
-/* Large Screens (Desktops, Laptops >= 1200px) */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none; /* Hide desktop nav on smaller screens */
+    display: none; /* when we are in mobile view (<1200), desktop nav doesnt show up */
   }
   #hamburger-nav {
-    display: flex; /* Show hamburger menu */
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+    display: flex;
   }
-  .hamburger-menu {
-    display: inline-block;
-  }
-  .menu-links {
-    width: 100%;
-    right: 0;
-    text-align: center;
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
   }
   #profile,
   .section-container {
     display: block;
   }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
   .section__pic-container {
-    width: 100%;
+    width: auto;
+    height: auto;
     margin: 0 auto 2rem;
   }
   .about-containers {
@@ -43,7 +46,6 @@
   }
 }
 
-/* Medium Screens (Tablets, >= 768px) */
 @media screen and (max-width: 768px) {
   section {
     padding: 4vh 5rem; /* Reduce side padding */
@@ -67,36 +69,36 @@
   }
 }
 
-/* Small Screens (Mobile Phones, >= 600px) */
 @media screen and (max-width: 600px) {
-  body {
-    padding: 0 1rem;
-  }
   #contact,
   footer {
-    height: auto; /* Let content determine height */
+    height: 40vh;
   }
-
-  #hamburger-nav {
-    display: flex; /* Show hamburger menu */
-    justify-content: space-between;
-    padding: 0.5rem; /* Adjust padding for smaller screens */
-    width: 100%; /* Full width */
-  }
-
-  .hamburger-icon {
-    height: 20px;
-    width: 25px;
-  }
-
-  .menu-links {
-    width: 100%; /* Ensure full width */
-    top: 100%; /* Ensure it is positioned below hamburger icon */
-  }
-
   #profile {
-    height: auto;
+    height: 83vh;
     margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
   }
   .logo {
     font-size: 1.5rem;
@@ -106,22 +108,19 @@
     gap: 0.5rem;
     text-align: center;
   }
-  section {
-    padding: 4vh 2rem;
-  }
   .section__pic-container {
+    width: auto;
     height: 46vw;
     justify-content: center;
   }
   .section__text__p2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
-  .membership-card {
-    width: 100%;
-    margin-bottom: 2rem;
+  .text-container {
+    text-align: justify;
   }
 }
 
