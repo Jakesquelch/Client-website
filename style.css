@@ -173,6 +173,7 @@ section {
 .section__text {
   max-width: 600px;
   margin: auto;
+  text-align: center;
 }
 
 .title {
@@ -181,6 +182,7 @@ section {
   color: #333;
   border-bottom: 3px solid #8000ff;
   padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .section__text__p1 {
