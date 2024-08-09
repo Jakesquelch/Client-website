@@ -1,3 +1,6 @@
+/* Media Queries */
+
+/* Extra Large Screens (Desktops, >= 1400px) */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -8,34 +11,31 @@
   }
 }
 
+/* Large Screens (Desktops, Laptops >= 1200px) */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none; /* when we are in mobile view (<1200), desktop nav doesnt show up */
+    display: none; /* Hide desktop nav on smaller screens */
   }
   #hamburger-nav {
-    display: flex;
+    display: flex; /* Show hamburger menu */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+  .hamburger-menu {
+    display: inline-block;
+  }
+  .menu-links {
+    width: 100%;
+    right: 0;
+    text-align: center;
   }
   #profile,
   .section-container {
     display: block;
   }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
+    width: 100%;
     margin: 0 auto 2rem;
   }
   .about-containers {
@@ -43,36 +43,60 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+/* Medium Screens (Tablets, >= 768px) */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 4vh 5rem; /* Reduce side padding */
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+  .section__text {
+    max-width: 100%;
+    padding: 0 1rem; /* Add some padding */
   }
-  article {
-    font-size: 1rem;
+  .section__pic-container {
+    width: auto;
+    height: auto;
+    margin: 0 auto 2rem;
   }
-  footer nav {
-    height: fit-content;
+  .membership-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .membership-card {
+    width: 80%;
     margin-bottom: 2rem;
   }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
+}
+
+/* Small Screens (Mobile Phones, >= 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 1rem;
   }
-  .contact-info-container {
-    margin: 0;
+  #contact,
+  footer {
+    height: auto; /* Let content determine height */
   }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
+
+  #hamburger-nav {
+    display: flex; /* Show hamburger menu */
+    justify-content: space-between;
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+    width: 100%; /* Full width */
   }
-  .experience-sub-title {
-    font-size: 1.25rem;
+
+  .hamburger-icon {
+    height: 20px;
+    width: 25px;
+  }
+
+  .menu-links {
+    width: 100%; /* Ensure full width */
+    top: 100%; /* Ensure it is positioned below hamburger icon */
+  }
+
+  #profile {
+    height: auto;
+    margin-bottom: 0;
   }
   .logo {
     font-size: 1.5rem;
@@ -82,18 +106,48 @@
     gap: 0.5rem;
     text-align: center;
   }
+  section {
+    padding: 4vh 2rem;
+  }
   .section__pic-container {
-    width: auto;
     height: 46vw;
     justify-content: center;
   }
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  .text-container {
-    text-align: justify;
+  .membership-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Extra Small Screens (Mobile Phones, < 600px) */
+@media screen and (max-width: 480px) {
+  section {
+    padding: 4vh 1rem;
+  }
+  .section__text {
+    padding: 0;
+  }
+  .title {
+    font-size: 1.5rem;
+    padding-bottom: 0.25rem;
+  }
+  .membership-card {
+    padding: 1rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+  .section__pic-container {
+    height: auto;
+  }
+  .contact-email {
+    font-size: 0.9rem;
   }
 }

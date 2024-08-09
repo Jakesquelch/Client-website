@@ -276,7 +276,6 @@ section {
 }
 
 .contact-email {
-  margin-bottom: 1.5rem;
   color: #8000ff;
 }
 
@@ -327,4 +326,9 @@ section {
 .membership-card .btn {
   width: 100%;
   font-size: 1.2rem;
+}
+
+.copy {
+  text-align: center;
+  color: #555;
 }
