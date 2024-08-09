@@ -44,6 +44,17 @@
   .about-containers {
     margin-top: 0;
   }
+  #join-now {
+    padding: 5vh 6rem;
+  }
+  .membership-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .membership-card {
+    max-width: 300px; /* Adjust based on the design */
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -122,6 +133,27 @@
   .text-container {
     text-align: justify;
   }
+  #join-now {
+    padding: 4vh 2rem;
+  }
+  .membership-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .membership-card {
+    width: 100%;
+    max-width: none; /* Full width for small screens */
+  }
+  .membership-card h2 {
+    font-size: 1.5rem;
+  }
+  .price {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
 }
 
 /* Extra Small Screens (Mobile Phones, < 600px) */
@@ -148,5 +180,24 @@
   }
   .contact-email {
     font-size: 0.9rem;
+  }
+  #join-now {
+    padding: 4vh 1rem;
+  }
+  .membership-container {
+    gap: 0.5rem;
+  }
+  .membership-card {
+    padding: 1rem;
+    max-width: none; /* Full width for extra small screens */
+  }
+  .membership-card h2 {
+    font-size: 1.4rem;
+  }
+  .price {
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 0.85rem;
   }
 }
