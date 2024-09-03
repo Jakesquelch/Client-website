@@ -26,22 +26,25 @@ p {
 
 /* NAVIGATION */
 
+/* NAVIGATION */
+
 nav,
 .nav-links {
   display: flex;
 }
 
 nav {
-  justify-content: space-around;
+  justify-content: space-around; /* Adjust to space items correctly */
   align-items: center;
-  height: 10vh; /* Whatever height of screen, nav takes 17% */
-  padding: 1rem 0; /* Adjust padding to balance the content */
+  height: 10vh; /* Keeps the same height */
+  padding: 1rem 0; /* Keeps the same padding */
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  margin: 0; /* Remove default margin */
 }
 
 a {
@@ -57,9 +60,10 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
+.logo img {
+  height: 100%; /* Adjust this as needed */
+  max-height: 50px; /* Ensure the logo doesn't get too large */
+  width: auto;
 }
 
 .logo:hover {
